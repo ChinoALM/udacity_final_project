@@ -114,7 +114,7 @@ bio.display= function() {
 }
 
 work.display = function() {
-    for (job in work.jobs){
+    for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
