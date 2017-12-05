@@ -82,6 +82,29 @@ var work = {
     ]
 }
 
+var projects ={
+    "projects": [
+        {
+            "title": "Sample project 1",
+            "dates": "Sample date 1",
+            "description": "I didn't have any projects at the moment so I inserted placers so I can adjust at a later date",
+            "images": [
+                "images/197x148.gif",
+                "images/197x148.gif"
+            ]
+        },
+        {
+            "title": "Sample project 2",
+            "dates": "Sample date 2",
+            "description": "I didn't have any projects at the moment so I inserted placers so I can adjust at a later date",
+            "images": [
+                "images/197x148.gif",
+                "images/197x148.gif"
+            ]
+        }
+    ]
+}
+
 bio.display= function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").append(formattedName);
@@ -204,4 +227,5 @@ $("#mapDiv").append(googleMap);
 
 bio.display()
 work.display()
+projects.display()
 education.display()
