@@ -200,6 +200,7 @@ function inName(name) {
 }
 
 $('#main').append(internationalizeButton);
+$("#mapDiv").append(googleMap);
 
 bio.display()
 work.display()
