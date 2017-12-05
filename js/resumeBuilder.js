@@ -9,7 +9,7 @@ var bio = {
     },
     "welcomeMessage": "What have you done today to better your tomorrow? Seize the day!",
     "skills": [
-        "SQL", "HTML", "CSS", "Java Script"],
+        "Programming languages learned in this class:", "HTML", "CSS", "Java Script"],
     "biopic": "images/resume.jpg"
 }
 
@@ -85,27 +85,36 @@ var work = {
 var projects ={
     "projects": [
         {
-            "title": "Sample project 1",
-            "dates": "Sample date 1",
-            "description": "I didn't have any projects at the moment so I inserted placers so I can adjust at a later date",
+            "title": "Sample Project 1 - Creating First Website",
+            "dates": "April 2017",
+            "description": "Stage 1 of the Udacity Intro to Programming Nanodegree",
             "images": [
-                "images/197x148.gif",
-                "images/197x148.gif"
+                "images/project1.jpg"
             ]
         },
         {
-            "title": "Sample project 2",
-            "dates": "Sample date 2",
-            "description": "I didn't have any projects at the moment so I inserted placers so I can adjust at a later date",
+            "title": "Sample Project 2 - Python Turtle",
+            "dates": "November 2017",
+            "description": "This was one of my favorite projects from this class!",
             "images": [
-                "images/197x148.gif",
-                "images/197x148.gif"
+                "images/project2.jpg"
+            ]
+        },
+        {
+            "title": "Sample Project 3 - Movie Website Mini Project",
+            "dates": "November 2017",
+            "description": "Stage 4 of Intro to Programming Nanodegree",
+            "images": [
+                "images/project3.jpg"
             ]
         }
     ]
 }
 
 bio.display= function() {
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+    $("#header").append(formattedPic);
+
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").append(formattedName);
 
@@ -126,9 +135,6 @@ bio.display= function() {
 
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMsg);
-
-    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedPic);
 
     for(var i=0; i<bio.skills.length; i+=1){
         var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
