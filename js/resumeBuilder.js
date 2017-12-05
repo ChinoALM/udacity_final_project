@@ -56,7 +56,7 @@ var work = {
             "location" : "Indianapolis, IN, US",
             "description": "Provides primary front of house support for " +
                 "Iozzo's Garden of Italy. Executes deployments of menu knowledge " +
-                "requirments, managing client expectations, communicating with " +
+                "requirements, managing client expectations, communicating with " +
                 "internal departments to achieve standards of success everyday."
         },
         {
@@ -66,7 +66,7 @@ var work = {
             "location" : "Indianapolis, IN, US",
             "description": "Provided primary front of house support for " +
                 "McCormick & Schmicks. Executed deployments of menu knowledge " +
-                "requirments, managing client expectations, communicating with " +
+                "requirements, managing client expectations, communicating with " +
                 "internal departments to achieve standards of success everyday."
         },
         {
@@ -76,7 +76,7 @@ var work = {
             "location" : "Chelsea, MI, US",
             "description": "Provided primary front of house support for " +
                 "Back to the Roots. Executed deployments of menu knowledge " +
-                "requirments, managing client expectations, communicating with " +
+                "requirements, managing client expectations, communicating with " +
                 "internal departments to achieve standards of success everyday."
         }
     ]
@@ -154,6 +154,19 @@ education.display = function() {
         $(".education-entry:last").append(formattedMajor);
     }
 }
+
+function locationizer(work_obj) {
+    var locationArray = [];
+
+    for (job in work_obj.jobs){
+        var newLocation = work_obj.jobs[job].location;
+        locationArray.push(newLocation);
+    }
+    return locationArray;
+}
+
+// Did locationizer() work? This line will tell you!
+console.log(locationizer(work));
 
 bio.display()
 work.display()
