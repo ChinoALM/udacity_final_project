@@ -2,7 +2,7 @@ var data = '%data%';
 
 var bio = {
     "name": "Anthony L Morton",
-    "role": "Front-end Developer",
+    "role": "UX/UI Developer",
     "contacts": {
         "mobile": "555-5555",
         "email": "mortona35@gmail.com",
