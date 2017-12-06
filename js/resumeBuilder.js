@@ -124,16 +124,16 @@ bio.display= function() {
     $("#header").append(formattedRole);
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#header, #footer-entry" ).append(formattedMobile);
+    $("#header, #footerContacts" ).append(formattedMobile);
 
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#header, #footer-entry").append(formattedEmail);
+    $("#header, #footerContacts").append(formattedEmail);
 
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#header, #footer-entry").append(formattedGithub);
+    $("#header, #footerContacts").append(formattedGithub);
 
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#header, #footer-entry").append(formattedLocation);
+    $("#header, #footerContacts").append(formattedLocation);
 
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMsg);
@@ -207,9 +207,6 @@ projects.display = function() {
         }
     }
 };
-
-// Did locationizer() work? Printing the console log in dev tools will tell you!
-console.log(locationizer(work));
 
 function inName(name) {
     name = name.trim().split(" ");
