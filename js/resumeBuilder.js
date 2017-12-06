@@ -16,14 +16,6 @@ var bio = {
 var education = {
     "schools": [
         {
-            "name": "Udacity",
-            "degree": "Nano Degree",
-            "majors": ["Intro to Programming"],
-            "dates": "March 2017-December 2017",
-            "location": "Online",
-            "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
-        },
-        {
             "name": "Wabash College",
             "location": "Crawfordsville, IN",
             "degree": "Bachelors of the Arts",
@@ -31,6 +23,16 @@ var education = {
             "dates": "2006-2010",
             "url": "http://www.wabash.edu/"
         },
+    ],
+    "onlineCourses": [
+        {
+            "name": "Udacity",
+            "degree": "Nanodegree",
+            "majors": ["Intro to Programming"],
+            "dates": "March 2017-December 2017",
+            "location": "Online",
+            "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
+        }
     ]
 }
 
