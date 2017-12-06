@@ -5,13 +5,13 @@ var bio = {
         "mobile": "555-5555",
         "email": "mortona35@gmail.com",
         "github": "@ChinoALM",
-        "location": "Indianapolis, IN, US"
+        "location": "Indianapolis, IN"
     },
     "welcomeMessage": "What have you done today to better your tomorrow? Seize the day!",
     "skills": [
         "Programming languages learned in this class:", "HTML", "CSS", "Java Script"],
     "biopic": "images/resume.jpg"
-}
+};
 
 var education = {
     "schools": [
@@ -30,11 +30,11 @@ var education = {
             "degree": "Nanodegree",
             "majors": ["Intro to Programming"],
             "dates": "March 2017-December 2017",
-            "location": "Online",
+            "location": "Indianapolis, IN",
             "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
         }
     ]
-}
+};
 
 var work = {
     "jobs": [
@@ -42,7 +42,7 @@ var work = {
             "employer": "Mad Hat Enterprise",
             "title": "Character Performer & Entertainment Specialist",
             "dates": "April 2017 - Present",
-            "location" : "Indianapolis, IN, US",
+            "location" : "Indianapolis, IN",
             "description": "Inspires imagination and creativity as a character " +
                 "performer in the role of the Mad Hatter, attending music " +
                 "festivals and music related events across the United States. " +
@@ -55,7 +55,7 @@ var work = {
             "employer": "Iozzo's Garden of Italy",
             "title": "Hospitality Specialist",
             "dates": "February 2015 - Present",
-            "location" : "Indianapolis, IN, US",
+            "location" : "Indianapolis, IN",
             "description": "Provides primary front of house support for " +
                 "Iozzo's Garden of Italy. Executes deployments of menu knowledge " +
                 "requirements, managing client expectations, communicating with " +
@@ -65,7 +65,7 @@ var work = {
             "employer": "McCormick & Schmicks",
             "title": "Hospitality Specialist",
             "dates": "February 2014 - February 2015",
-            "location" : "Indianapolis, IN, US",
+            "location" : "Indianapolis, IN",
             "description": "Provided primary front of house support for " +
                 "McCormick & Schmicks. Executed deployments of menu knowledge " +
                 "requirements, managing client expectations, communicating with " +
@@ -75,16 +75,16 @@ var work = {
             "employer": "Back to the Roots",
             "title": "Hospitality Specialist",
             "dates": "January 2013 - September 2013",
-            "location" : "Chelsea, MI, US",
+            "location" : "Chelsea, MI",
             "description": "Provided primary front of house support for " +
                 "Back to the Roots. Executed deployments of menu knowledge " +
                 "requirements, managing client expectations, communicating with " +
                 "internal departments to achieve standards of success everyday."
         }
     ]
-}
+};
 
-var projects ={
+var projects = {
     "projects": [
         {
             "title": "Sample Project 1 - Creating First Website",
@@ -111,7 +111,7 @@ var projects ={
             ]
         }
     ]
-}
+};
 
 bio.display= function() {
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -142,7 +142,7 @@ bio.display= function() {
         var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
         $("#header").append(formattedSkills);
     }
-}
+};
 
 work.display = function() {
     for (job in work.jobs) {
@@ -163,7 +163,7 @@ work.display = function() {
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
     }
-}
+};
 
 education.display = function() {
     for(school in education.schools) {
@@ -184,7 +184,7 @@ education.display = function() {
         var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
         $(".education-entry:last").append(formattedMajor);
     }
-}
+};
 
 projects.display = function() {
     for (project in projects.projects) {
@@ -206,17 +206,7 @@ projects.display = function() {
             }
         }
     }
-}
-
-function locationizer(work_obj) {
-    var locationArray = [];
-
-    for (job in work_obj.jobs){
-        var newLocation = work_obj.jobs[job].location;
-        locationArray.push(newLocation);
-    }
-    return locationArray;
-}
+};
 
 // Did locationizer() work? Printing the console log in dev tools will tell you!
 console.log(locationizer(work));
@@ -233,7 +223,7 @@ function inName(name) {
 $('#main').append(internationalizeButton);
 $("#mapDiv").append(googleMap);
 
-bio.display()
-work.display()
-projects.display()
-education.display()
+bio.display();
+work.display();
+projects.display();
+education.display();
